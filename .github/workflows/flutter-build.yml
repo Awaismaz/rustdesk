@@ -1755,7 +1755,7 @@ jobs:
           run: |
             # disable git safe.directory
             git config --global --add safe.directory "*"
-            # set python3.7 as default python3
+            # set python3.7 as default python
             update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
             # add built CMake to PATH and set VCPKG_FORCE_SYSTEM_BINARIES Afor arm-linux
             if [ "${{ matrix.job.vcpkg-triplet }}" = "arm-linux" ]; then
